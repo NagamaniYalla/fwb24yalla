@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p Search results Nachos 
+  p 
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let nachos = [
+                    {
+                        "flavour": "Cheese",
+                        "taste": "sweet" ,
+                        "cost": 30
+                    },
+                    {
+                        "flavour": "Hot & Spicy",
+                        "taste": "spicy" ,
+                        "cost": 25
+                    },
+                    {
+                        "flavour": "Masala",
+                        "taste": "spicy" ,
+                        "cost": 40
+                    },                   
+                ]
+            each v,index in nachos 
+                div(class="col-sm-2" ) #{v.flavour}
+                div(class="col-sm-2")  #{v.taste}
+                div(class="col-sm-2") #{v.cost}
+
+  
